@@ -7,13 +7,14 @@ using namespace std;
 class Solution{
     public:
     //Complete this function
+    void solve(int i,int N){
+        if(i>N) return;
+        cout<<i<<" ";
+        solve(i+1,N);
+    }
     void printNos(int N)
     {
-       if(N==0)
-       return;
-       else
-       printNos(N-1);
-       cout<<N<<" ";
+        solve(1,N);
     }
 };
 
